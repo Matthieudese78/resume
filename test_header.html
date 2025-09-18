@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume header</title>
+  <style>
+    :root{
+      --frame-bg: rgba(243,244,246,0.85);
+      --accent: #0f172a;
+      --muted: #6b7280;
+    }
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 0; background: #fff; color: var(--accent);
+    }
+
+    .header-frame{
+      position: relative; /* <-- add this */
+      background: var(--frame-bg);
+      padding: 20px 22px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* justify-content: flex-start; */
+      gap: 20px;
+      background-image: url('background.png'); /* replace with your image path */
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: var(--accent);
+
+      max-height: 900px;
+      margin: 20px auto ;
+    }
+
+    .header-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(243,244,246,0.8); /* adjust transparency */
+      border-radius: 12px;
+      z-index: 0; /* ensure overlay sits below children */
+    }
+
+    .header-frame > * {
+      position: relative; /* ensures content is above overlay */
+      z-index: 1; /* ensure content appears above overlay */
+    }
+
+    .profile-pic{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .name{
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.05;
+    }
+    .title{
+      margin: 6px 0 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .contacts{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .contact-item{
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--accent);
+      cursor: pointer;
+    }
+    .contact-item:hover{
+      text-decoration: underline;
+    }
+
+    main {
+    background: #fff; /* solid background */
+    padding: 20px 22px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 0;
+    box-shadow: none;
+    }
+    section {
+    margin-bottom: 20px;
+    }
+    section h2 {
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    }
+
+    /* ---- WORK EXPERIENCE two-column layout ---- */
+    .we-list {
+      display: grid;
+      gap: 18px;
+    }
+    .we-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .we-left {
+      text-align: right;
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding-top: 6px;
+      white-space: nowrap;
+    }
+    .we-right h3 {
+      margin: 0 0 6px 0;
+      font-size: 1rem;
+    }
+    .we-right p { margin: 0 0 8px 0; color:#222; }
+    .we-right ul { margin: 0 0 8px 1.1rem; }
+
+    @media (max-width:700px){
+      .we-item { grid-template-columns: 1fr; }
+      .we-left { text-align: left; padding-top:0; }
+    }
+    @media (max-width:600px){
+      .header-frame{flex-direction: column; align-items: flex-start}
+      .contacts{align-items: flex-start}
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header-frame">
+    <img src="photo_matthieu_serre.jpg" alt="Profile photo" class="profile-pic" />
+
+    <div>
+      <h1 class="name">Matthieu SERRE</h1>
+      <p class="title">Doctor in mechanical simulation | Scientific software development </p>
+    </div>
+
+    <nav class="contacts">
+      <a class="contact-item" href="mailto:you@example.com">✉️ matthieu.serre78@gmail.com</a>
+      <a class="contact-item">☎️ +33 6 32 27 99 30</a>
+      <span class="contact-item">📍 Paris, France</span>
+      <a class="contact-item" href="https://github.com/Matthieudese78"  target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
+       alt="GitHub" style="width:1em;height:1em;vertical-align:middle;margin-right:4px;">
+       Matthieudese78
+      </a>
+    </nav>
+  </header>
+
+  <!-- resume corpus: -->
+  <main>
+  <section id="Summary">
+  <h2>Summary</h2>
+  <p> Research and development engineer with a PhD in Mechanical Engineering, specialized in numerical simulation of mechanical systems. Experienced in multibody dynamics, contact mechanics. Proficient in Fortran and object oriented Python. Strong problem-solving skills and ability to work in interdisciplinary teams. </p>
+  </section>
+
+  <section id="work-experience">
+  <h2> &#128188 Work Experience</h2>
+
+  <div class="we-list">
+    <div class="we-item">
+      <div class="we-left">Jul 2020 – Dec 2024</div>
+        <div class="we-right">
+        <h3> PhD - Contact model reduction applied to flexible multibody dynamics, Dynamic Studies Lab. CEA (Saclay, France) <em>July 2020 - December 2024</em> </h3> 
+        Numerical modeling of the vibratory behavior of flexible multibody systems undergoing shocks enables accurate structural health monitoring in hard-to-access environments. 
+        <ul> 
+          <li>Numerical modeling of vibratory behaviour of flexible multibody systems under shocks for structural‑health monitoring.</li>
+          <li>Developed an explicit integration scheme for flexible multibody dynamics (Lie‑group integration and inertia coupling). Integrated into an industrial Fortran code.</li>
+          <li>Designed a circle–cone reduced contact model for accurate non‑linear contact solicitations with low computational cost. (Fortran; data processing with pandas)</li>
+          <li>Industrial case study on a pressurised‑water reactor component; recalibrated the model against experimental results. (Fortran, Python)</li>
+          <li>Planned and ran acoustic test campaigns on complete vehicles; coordinated a team of four under tight deadlines.</li> 
+        </ul> 
+        <p><strong>Communications</strong></p>
+        <ul>
+          <li>CSMA 2022 (Giens, France): “Vibratory modelling of multibody systems”.</li>
+          <li>Nodycon 2023 (Rome, Italy): “A reduced model for conical contact dedicated to flexible multibody dynamics”.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="we-item">
+      <div class="we-left">Oct 2018 – Oct 2019</div>
+      <div class="we-right">
+        <h3>Acoustic test engineer, Akka Tech. - Mercedes Benz (Stuttgart, Germany)</h3>
+        <p>Conducted acoustic test campaigns in a team of four on entire vehicles within strict deadlines.</p>
+        <ul>
+          <li>Conceived a measurement system for sound intensity in a car cabin.</li>
+          <li>Planned and ran test campaigns; analysed frequency response and produced technical reports.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+
+  <section id="education">
+  <h2>  🎓 Education</h2>
+  <p>Details of your degrees, schools, etc...</p>
+  </section>
+
+
+  <section id="programming-languages">
+  <h2>💻 Programming Languages</h2>
+  <p>List your programming languages and proficiency.</p>
+  </section>
+
+
+  <section id="scientific-skills">
+  <h2>🔬 Scientific Skills</h2>
+  <p>List your scientific skills, experiments, modeling, etc.</p>
+  </section>
+  </main>
+
+
+
+</body>
+</html>

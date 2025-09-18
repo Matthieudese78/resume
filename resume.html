@@ -21,45 +21,121 @@
   <br> &#128205: Paris, France
   <!-- <br>![Octocat](https://github.githubassets.com/images/modules/logos_page/Octocat.png) https://github.com/Matthieudese78/ -->
   <br> <img src=https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg style="height: 1em; width: 1em; vertical-align: -0.125em;"> https://github.com/Matthieudese78/
+  <br> Availability: immediate
 </span>
+<!-- new header -->
+# Matthieu SERRE <br> <span style="font-size:0.5em;">Doctor in Mechanical Numerical Simulation | Robotics / Multibody Dynamics</span>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume header</title>
+  <style>
+    :root{
+      --frame-bg: rgba(243,244,246,0.85);
+      --accent: #0f172a;
+      --muted: #6b7280;
+    }
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 0; background: #fff; color: var(--accent);
+    }
 
-# Matthieu Serre <br> <span style="font-size:0.5em;">Doctor in Mechanical Numerical Simulation | Robotics / Multibody Dynamics</span>
+    .header-frame{
+      background: var(--frame-bg);
+      padding: 20px 22px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background-image: url('your-image.jpg'); /* replace with your image path */
+      background-size: cover;
+      background-position: center;
+      color: var(--accent);
+    }
+
+    .profile-pic{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .name{
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.05;
+    }
+    .title{
+      margin: 6px 0 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .contacts{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .contact-item{
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    @media (max-width:600px){
+      .header-frame{flex-direction: column; align-items: flex-start}
+      .contacts{align-items: flex-start}
+    }
+  </style>
+</head>
+</html>
 
 ## Executive Summary
 
-* 10 years project/team management experience
+Research and development engineer with a PhD in Mechanical Engineering, specialized in numerical simulation of mechanical systems. Experienced in multibody dynamics, contact mechanics. Proficient in Fortran and object oriented Python. Strong problem-solving skills and ability to work in interdisciplinary teams.
 
-## &#128188 Working Experience 
+## &#128188 Work Experience 
+ <!-- <h3, style="display:inline; font-weight:bold;"> July 2020 - December 2024: PHD - Contact model reduction applied to flexible multibody dynamics, Dynamic Studies Lab. CEA (Saclay, France) </h3>  -->
+ <h3> PhD - Contact model reduction applied to flexible multibody dynamics, Dynamic Studies Lab. CEA (Saclay, France) <em>July 2020 - December 2024</em> </h3> 
+ Numerical modeling of the vibratory behavior of flexible multibody systems undergoing shocks enables accurate structural health monitoring in hard-to-access environments.  
+- Development of an explicit integration scheme for flexible multibody dynamics (i.e. robotics), including specific integration on Lie groups and inertia coupling between DOFs. Integration into an industrial code. (Fortran)
+- Circle-cone reduced contact model development designed for highly precise computation of sollicitations on a geometrically non-linear contact configuration. Access to fine definition on contact sollicitations without raising the computation cost as would classical mesh-to-mesh techniques. (Fortran + data processing with pandas)
+- Industrial case study on a component of a pressurized water nuclear reactor. Recalibration with experimental results. (Fortran + Python)
+- Communications :
+   - CSMA 2022 (Giens, France) : “Vibratory modelling of  multybody systems”,
+   - Nodycon 2023 (Rome, Italy) : “A reduced model for conical contact dedicated to flexible multibody dynamics”.
 
-<div style="display: flex; gap: 1em;">
-  <div style="flex: 1; border-right: 1px solid #ccc; padding-right: 1em;">
-    More text here
-  </div>
-  <div style="flex: 1; padding-left: 1em;">
-    More text here
-  </div>
-</div>
+ <h3> Acoustic test engineer, Akka Tech. - Mercedes Benz (Stuttgart, Germany) <em>October 2018 - October 2029</em> </h3> 
+ Conducted acoustic test campaigns in a team of four on entire vehicles within strict deadlines.  
+- Conception of a measurement system for sound intensity in a car cabin.
+- Test campaigns conduction.
+- Frequency response analysis and technical reports redaction.
 
-#### Current Company (Project Manager, 2015/08 - present) 
+ <h3> Electromagnetic simulation engineer, Akka Tech. - Mercedes Benz (Stuttgart, Germany) <em>October 2017 - October 2018</em> </h3> 
+Development of an electromagnetic-based acoustic optimization process for electric motors (NVH). Internal expertise development for future customer's acquisition.
+- Finite element electromagnetic calculations of magnetic forces.
+- Acoustic computations with magnetic forces as input.
+- Process presentation to customers.
 
-*
+## 🎓 Education 
+<h3> Engineering degree -Arts & Métiers ParisTech (ENSAM) <em>2013 - 2016</em> </h3> 
+- Specialty : applied mathematics to numerical simulation, finite element method, linear dynamics
+- Multi-disciplinary generalist training :
+  - Mechanical engineering, industrial engineering
+  - Fluid dynamics, thermodynamics, electronics
+  - Controlled systems
 
-#### Second Company (System Analyst, 2011/06 - 2015/07) 
+<h3> Preparatory classes for top schools - Lycée Hoche (Versailles, France) <em>2010 - 2013</em> </h3> 
+- Specialty : Physics & Chemistry
 
-* Led team of 5 for application development
+## 🛠️ Skills
 
-#### My first Company (Analyst Programmer, 2005/01 - 2011/05)
-
-* Develop multiple applications using Javascript, Java, PHP, Powerbuilder, Oracle
-
-## Projects
-
-* [Casual-Markdown](https://github.com/casualwriter/powerpage) - a lightweight markdown parser
-
-## Education & Qualifications
-
-* AWS Certification (2021/12)
-
-## Misc. Information
-
-* Languages: English (good), Cantonese (fluent/native), Mandarin (good)
