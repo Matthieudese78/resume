@@ -58,7 +58,8 @@
       margin: 20px auto ; */
 
       max-width: var(--content-width); /* match body width */
-      width: 100%;
+      width: 95%;
+      /* width: auto; */
       margin: 8px auto;
     }
 
@@ -103,10 +104,13 @@
       flex-direction: column;
       gap: 8px;
       align-items: flex-start;
+      font-size: 0.7rem;
+      line-height: 1.15;
+     /* transform: translateX(-18px); nudge contacts slightly toward the center */
     }
     .contact-item{
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: inherit;
       color: var(--accent);
       cursor: pointer;
     }
@@ -225,7 +229,7 @@
     </div>
 
     <nav class="contacts">
-      <a class="contact-item" href="mailto:you@example.com">✉️ matthieu.serre78@gmail.com</a>
+      <a class="contact-item" href="mailto:you@example.com">✉️&nbsp;matthieu.serre78@gmail.com</a>
       <a class="contact-item">☎️ +33 6 32 27 99 30</a>
       <span class="contact-item">📍 Paris, France</span>
       <a class="contact-item" href="https://github.com/Matthieudese78"  target="_blank" rel="noopener noreferrer">
