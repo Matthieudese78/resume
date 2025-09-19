@@ -12,7 +12,7 @@
     /* ensure printable page margins */
     @page { size: A4 portrait; margin: 12mm; }
     @media print {
-      .header-frame, main { -webkit-print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .header-frame, main { -webkit-print-color-adjust: exact; }
     }
     :root{
       --frame-bg: rgba(243,244,246,0.85);
@@ -143,36 +143,6 @@
     margin-bottom: 8px;
     }
 
-    /* ---- WORK EXPERIENCE two-column layout ----
-    .we-list {
-      display: grid;
-      gap: 18px;
-    }
-    .we-item {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .we-left {
-      text-align: right;
-      color: var(--muted);
-      font-size: 0.92rem;
-      padding-top: 6px;
-      white-space: nowrap;
-    }
-    .we-right h3 {
-      margin: 0 0 6px 0;
-      font-size: 1rem;
-    }
-    .we-right p { margin: 0 0 8px 0; color:#222; }
-    .we-right ul { margin: 0 0 8px 1.1rem; }
-
-    @media (max-width:700px){
-      .we-item { grid-template-columns: 1fr; }
-      .we-left { text-align: left; padding-top:0; }
-    } */
-
     .we-list {
       display: grid;
       gap: 18px;
@@ -207,6 +177,19 @@
     .we-right p { margin: 0 0 8px 0; color:#222; }
     .we-right ul { margin: 0 0 8px 1.1rem; }
 
+    .gui-button {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff; /* white background */
+      cursor: pointer;
+      font-family: sans-serif;
+    }
+    .gui-button:hover {
+      background-color: #f5f5f5; /* light gray on hover */
+    }
+
     @media (max-width:700px){
       .we-item { grid-template-columns: 1fr; grid-template-areas: none; }
       .we-left { text-align: left; }
@@ -230,12 +213,11 @@
 
     <nav class="contacts">
       <a class="contact-item" href="mailto:you@example.com">✉️&nbsp;matthieu.serre78@gmail.com</a>
-      <a class="contact-item">☎️ +33 6 32 27 99 30</a>
-      <span class="contact-item">📍 Paris, France</span>
+      <a class="contact-item">☎️&nbsp;+33 6 32 27 99 30</a>
+      <span class="contact-item">📍&nbsp;Paris, France</span>
       <a class="contact-item" href="https://github.com/Matthieudese78"  target="_blank" rel="noopener noreferrer">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
-       alt="GitHub" style="width:1em;height:1em;vertical-align:middle;margin-right:4px;">
-       Matthieudese78
+       alt="GitHub" style="width:1em;height:1em;vertical-align:middle;margin-right:4px;">&nbsp;Matthieudese78
       </a>
     </nav>
   </header>
@@ -245,6 +227,29 @@
   <section id="Summary">
   <h2>Summary</h2>
   <p> Research and development engineer with a PhD in Mechanical Engineering, specialized in numerical simulation of mechanical systems. Experienced in multibody dynamics, contact mechanics. Proficient in Fortran and object oriented Python. Strong problem-solving skills and ability to work in interdisciplinary teams. </p>
+  </section>
+
+  <section id="programming-languages">
+  <h2>💻 Programming Skills</h2>
+
+  <div class="we-item">
+  <div class="we-left"> </div>
+  <div class="we-right">
+    <ul>
+      <li> Programming Languages: <span class="gui-button">Fortran</span> <span class="gui-button">Python</span> <span class="gui-button">Shell (bash,zsh)</span>   <span class="gui-button">MATLAB</span> <span class="gui-button">Mathematica</span> </li>
+      <li> Programming Environments: 
+<span class="gui-button">  Linux </span> <span class="gui-button">  VSCode </span> <span class="gui-button">  GitLab </span> <span class="gui-button">  GitHub </span> <span class="gui-button"> Calculations on cluster (slurm) </span>  </li>
+    </ul>
+    </div>
+  </div>
+  </section>
+
+
+  <section id="scientific-skills">
+  <h2>🔬 Scientific Skills</h2>
+  <ul> 
+    <span class="gui-button"> Lagrangian mechanics</span>      <span class="gui-button"> Contact modelling</span>      <span class="gui-button"> Finite element method</span>      <span class="gui-button"> Linear vibrations, modal decomposition</span>      <span class="gui-button"> Flexible multibody dynamics (robotics)</span>      <span class="gui-button"> Differential Geometry</span>      <span class="gui-button"> Explicit, implicit integration schemes</span> </li>
+  </ul>
   </section>
 
   <section id="work-experience">
@@ -283,26 +288,94 @@
       </div>
     </div>
 
+    <div class="we-item">
+      <div class="we-left">Oct 2017 – Oct 2018</div>
+      <div class="we-right">
+        <h3> Electromagnetic simulation engineer, Akka Tech. - Mercedes Benz (Stuttgart, Germany)</h3>
+        <p> Development of an electromagnetic-based acoustic optimization process for electric motors (NVH). Internal expertise development for future customers' acquisition. </p>
+        <ul>
+          <li> Finite element electromagnetic calculations of magnetic forces. </li> 
+          <li> Acoustic computations with magnetic forces as input. </li> 
+          <li> Process presentation to customers. </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="we-item">
+      <div class="we-left">Mar 2016 - Sep 2018</div>
+      <div class="we-right">
+        <h3> Graduate internship, Airbus (Bremen Germany) </h3>
+        <p> Development of a non-destructive test protocol to achieve compliance with European requirements. </p>
+        <ul>
+          <li> Installation of a test bench for ultrasonic inspection equipment. </li> 
+          <li> Writing of Airbus test-procedures and documentation.</li> 
+          <li> Training of the relevant staff members. </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
   </section>
 
+  <section id="education">
+  <h2> ⚙ Projects</h2>
+
+  <div class="we-item">
+  <div class="we-left"> "></href> </div>
+  <div class="we-right">
+    <h3>Personal projects</h3>
+    <ul>
+      <li> <a href="https://github.com/Matthieudese78/side_project.git" style="text-decoration: underline;">Implementation</a> of the 2D <span class="gui-button">Finite Element Method</span> from scratch in <span class="gui-button">Python </span>, applied to static, thermal, and thermo-mechanical (weak coupling) study cases.  </li>
+      <li>  <a href="git@github.com:Matthieudese78/dotb_case_study.git" style="text-decoration: underline;">Implementation</a> of the 2D <span class="gui-button">Finite Difference Method</span> from scratch in <span class="gui-button">Python </span>, applied to thermal study cases. </li>
+      <li> <a href="git@github.com:Matthieudese78/dotb_case_study.git" style="text-decoration: underline;">Implementation</a> of Euler explicit, Adams-Bashforth and Crank-Nicholson <span class="gui-button">Numerical Schemes</span> from scratch in <span class="gui-button">Python </span>, applied to thermal analysis and other study cases. </li>
+    </ul>
+
+    <h3>Student projects</h3>
+    <ul>
+      <li> <strong> Partnership with Decathlon</strong> </li>
+      <ul> 
+        <li> Production of an embedded monitoring <span class="gui-button">Arduino</span>-based box (vibration, speed, use duration) for long-term customer tests on scooter prototypes.</li>
+        <li> Main constraints: size, autonomy. </li>
+        <li> Technical solutions: <span class="gui-button">Arduino</span> board, sensors, relays. </li>
+      </ul>
+      <li> <strong> Structural Health Monitoring on a Safran turbo-reactor nacelle </strong> </li>
+      <ul> 
+        <li> Based on a network of piezoelectric sensors.</li>
+        <li> <span class="gui-button">MATLAB</span> implementation of a damage detection algorithm on the composite structure.
+      </ul>
+    </ul>
+  </div>
+  </div>
+
+  </div>
 
   <section id="education">
-  <h2>  🎓 Education</h2>
-  <p>Details of your degrees, schools, etc...</p>
+  <h2>🎓 Education</h2>
+
+  <div class="we-item">
+  <div class="we-left">Sep 2013 - Sep 2016</div>
+  <div class="we-right">
+    <h3>Engineering degree - Arts et Métiers (ENSAM)</h3>
+    <ul>
+      <li> Specialty : applied mathematics to numerical simulation, finite element method, linear dynamics.</li>
+      <li> Multi-disciplinary generalist training:</li>
+        <ul>
+          <li> Mechanical engineering, industrial engineering, </li>
+          <li> Fluid dynamics, thermodynamics, electronics,</li>
+          <li> Controlled systems.</li>
+        </ul>
+    </ul>
+    </div>
+  </div>
+
+  <div class="we-item">
+  <div class="we-left">Sep 2010 - Sep 2013</div>
+  <div class="we-right">
+    <h3> Preparatory classes for top schools - Lycée  Hoche (Versailles France) </h3>
+      <p>Specialty : physics and Chemistry.</p>
   </section>
 
 
-  <section id="programming-languages">
-  <h2>💻 Programming Languages</h2>
-  <p>List your programming languages and proficiency.</p>
-  </section>
-
-
-  <section id="scientific-skills">
-  <h2>🔬 Scientific Skills</h2>
-  <p>List your scientific skills, experiments, modeling, etc.</p>
-  </section>
   </main>
 
 
