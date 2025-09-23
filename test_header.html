@@ -17,7 +17,8 @@
     :root{
       --frame-bg: rgba(243,244,246,0.85);
       --accent: #0f172a;
-      --muted: #6b7280;
+      /* --muted: #6b7280; */
+      --deep-blue: #11439a; /* deep blue for name, title and section headings */
 
       --content-width: 950px; /* recommended */
     }
@@ -91,11 +92,13 @@
       font-weight: 700;
       margin: 0;
       line-height: 1.05;
+      color: var(--deep-blue);
     }
     .title{
       margin: 6px 0 0 0;
       font-size: 0.95rem;
-      color: var(--muted);
+      /* color: var(--muted); */
+      color: var(--deep-blue);
       font-weight: 500;
     }
 
@@ -104,7 +107,7 @@
       flex-direction: column;
       gap: 8px;
       align-items: flex-start;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       line-height: 1.15;
      /* transform: translateX(-18px); nudge contacts slightly toward the center */
     }
@@ -137,7 +140,9 @@
     }
     section h2 {
     font-size: 1.2rem;
-    border-bottom: 2px solid var(--accent);
+    /* border-bottom: 2px solid var(--accent); */
+    border-bottom: 2px solid var(--deep-blue);
+    color: var(--deep-blue);
     margin-top: 0.25rem;
     padding-bottom: 4px;
     margin-bottom: 8px;
@@ -212,10 +217,10 @@
     </div>
 
     <nav class="contacts">
-      <a class="contact-item" href="mailto:you@example.com">✉️&nbsp;matthieu.serre78@gmail.com</a>
+      <a class="contact-item" href="mailto:you@example.com" style="text-decoration: underline"> ✉️&nbsp;matthieu.serre78@gmail.com</a>
       <a class="contact-item">☎️&nbsp;+33 6 32 27 99 30</a>
       <span class="contact-item">📍&nbsp;Paris, France</span>
-      <a class="contact-item" href="https://github.com/Matthieudese78"  target="_blank" rel="noopener noreferrer">
+      <a class="contact-item" href="https://github.com/Matthieudese78" style="text-decoration: underline" target="_blank" rel="noopener noreferrer">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
        alt="GitHub" style="width:1em;height:1em;vertical-align:middle;margin-right:4px;">&nbsp;Matthieudese78
       </a>
@@ -225,8 +230,9 @@
   <!-- resume corpus: -->
   <main>
   <section id="Summary">
-  <h2>Summary</h2>
-  <p> Research and development engineer with a PhD in Mechanical Engineering, specialized in numerical simulation of mechanical systems. Experienced in multibody dynamics, contact mechanics. Proficient in Fortran and object oriented Python. Strong problem-solving skills and ability to work in interdisciplinary teams. </p>
+  <!-- <h2>Summary</h2> -->
+  <h2> Summary </h2>
+  <p> Research and development engineer, specialized in numerical simulation of mechanical systems. Experienced in multibody dynamics, contact mechanics and software development. Proficient in Fortran and object oriented Python. Strong curiosity and ability to work in interdisciplinary teams. </p>
   </section>
 
   <section id="programming-languages">
@@ -236,9 +242,8 @@
   <div class="we-left"> </div>
   <div class="we-right">
     <ul>
-      <li> Programming Languages: <span class="gui-button">Fortran</span> <span class="gui-button">Python</span> <span class="gui-button">Shell (bash,zsh)</span>   <span class="gui-button">MATLAB</span> <span class="gui-button">Mathematica</span> </li>
-      <li> Programming Environments: 
-<span class="gui-button">  Linux </span> <span class="gui-button">  VSCode </span> <span class="gui-button">  GitLab </span> <span class="gui-button">  GitHub </span> <span class="gui-button"> Calculations on cluster (slurm) </span>  </li>
+      <li> Programming languages: <span class="gui-button">Fortran</span> <span class="gui-button">Python</span> <span class="gui-button">Shell (bash,zsh)</span>   <span class="gui-button">MATLAB</span> <span class="gui-button">Mathematica</span> </li>
+      <li> Programming environments: <span class="gui-button">  Linux </span> <span class="gui-button">  VSCode </span> <span class="gui-button">  GitLab </span> <span class="gui-button">  GitHub </span> <span class="gui-button"> Large scale computations on cluster </span>  </li>
     </ul>
     </div>
   </div>
@@ -248,7 +253,7 @@
   <section id="scientific-skills">
   <h2>🔬 Scientific Skills</h2>
   <ul> 
-    <span class="gui-button"> Lagrangian mechanics</span>      <span class="gui-button"> Contact modelling</span>      <span class="gui-button"> Finite element method</span>      <span class="gui-button"> Linear vibrations, modal decomposition</span>      <span class="gui-button"> Flexible multibody dynamics (robotics)</span>      <span class="gui-button"> Differential Geometry</span>      <span class="gui-button"> Explicit, implicit integration schemes</span> </li>
+    <span class="gui-button"> Lagrangian mechanics</span>      <span class="gui-button"> Contact Mechanics</span>      <span class="gui-button"> Finite Element Method</span>      <span class="gui-button"> Linear vibrations, modal decomposition</span>      <span class="gui-button"> Flexible Multibody Dynamics (robotics)</span>      <span class="gui-button"> Differential Geometry</span>      <span class="gui-button"> Numerical Schemes </span> <span class="gui-button">Electromagnetics </span> </li>
   </ul>
   </section>
 
@@ -266,13 +271,20 @@
           <li>Developed an explicit integration scheme for flexible multibody dynamics (Lie‑group integration and inertia coupling). Integrated into an industrial Fortran code.</li>
           <li>Designed a circle–cone reduced contact model for accurate non‑linear contact solicitations with low computational cost. (Fortran; data processing with pandas)</li>
           <li>Industrial case study on a pressurised‑water reactor component; recalibrated the model against experimental results. (Fortran, Python)</li>
-          <li>Planned and ran acoustic test campaigns on complete vehicles; coordinated a team of four under tight deadlines.</li> 
         </ul> 
         <p><strong>Communications</strong></p>
         <ul>
           <li>CSMA 2022 (Giens, France): “Vibratory modelling of multibody systems”.</li>
           <li>Nodycon 2023 (Rome, Italy): “A reduced model for conical contact dedicated to flexible multibody dynamics”.</li>
         </ul>
+        <span class="gui-button"> Python </span>
+        <span class="gui-button"> Fortran </span>
+        <span class="gui-button"> Flexible Multibody Dynamics (robotics) </span>
+        <span class="gui-button"> Lagrangian Mechanics </span>
+        <span class="gui-button"> Numerical Schemes </span>
+        <span class="gui-button"> Contact Mechanics </span>
+        <span class="gui-button"> Finite Element Method </span>
+        <span class="gui-button"> Differential Geometry </span>
       </div>
     </div>
 
@@ -285,6 +297,9 @@
           <li>Conceived a measurement system for sound intensity in a car cabin.</li>
           <li>Planned and ran test campaigns; analysed frequency response and produced technical reports.</li>
         </ul>
+        <span class="gui-button"> Signal treatment </span>
+        <span class="gui-button"> Sensors </span>
+        <span class="gui-button"> Data acquisition </span>
       </div>
     </div>
 
@@ -298,6 +313,8 @@
           <li> Acoustic computations with magnetic forces as input. </li> 
           <li> Process presentation to customers. </li>
         </ul>
+        <span class="gui-button"> Electromagnetic simulation </span>
+        <span class="gui-button"> Acoustic simulation </span>
       </div>
     </div>
 
@@ -321,13 +338,13 @@
   <h2> ⚙ Projects</h2>
 
   <div class="we-item">
-  <div class="we-left"> "></href> </div>
+  <div class="we-left"> </href> </div>
   <div class="we-right">
     <h3>Personal projects</h3>
     <ul>
-      <li> <a href="https://github.com/Matthieudese78/side_project.git" style="text-decoration: underline;">Implementation</a> of the 2D <span class="gui-button">Finite Element Method</span> from scratch in <span class="gui-button">Python </span>, applied to static, thermal, and thermo-mechanical (weak coupling) study cases.  </li>
-      <li>  <a href="git@github.com:Matthieudese78/dotb_case_study.git" style="text-decoration: underline;">Implementation</a> of the 2D <span class="gui-button">Finite Difference Method</span> from scratch in <span class="gui-button">Python </span>, applied to thermal study cases. </li>
-      <li> <a href="git@github.com:Matthieudese78/dotb_case_study.git" style="text-decoration: underline;">Implementation</a> of Euler explicit, Adams-Bashforth and Crank-Nicholson <span class="gui-button">Numerical Schemes</span> from scratch in <span class="gui-button">Python </span>, applied to thermal analysis and other study cases. </li>
+      <li> <a href="https://github.com/Matthieudese78/FEM.git" style="text-decoration: underline;">Implementation</a> of the 2D <span class="gui-button">Finite Element Method</span> from scratch in <span class="gui-button">Python </span>, applied to static, thermal, and thermo-mechanical (weak coupling) study cases.  </li>
+      <li>  <a href="git@github.com:Matthieudese78/Finite_Difference.git" style="text-decoration: underline;">Implementation</a> of the 2D <span class="gui-button">Finite Difference Method</span> from scratch in <span class="gui-button">Python </span>, applied to thermal study cases. </li>
+      <li> <a href="git@github.com:Matthieudese78/Finite_Difference.git" style="text-decoration: underline;">Implementation</a> of Euler explicit, Adams-Bashforth and Crank-Nicholson <span class="gui-button">Numerical Schemes</span> from scratch in <span class="gui-button">Python </span>, applied to thermal analysis and other study cases. </li>
     </ul>
 
     <h3>Student projects</h3>
