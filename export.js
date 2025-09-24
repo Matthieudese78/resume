@@ -24,6 +24,6 @@ const OUTPUT_PDF = process.argv[3] || INPUT_HTML.replace(/\.html?$/i, ".pdf");
   });
 
   await browser.close();
-  console.log("PDF saved as ${OUTPUT_PDF} (from ${INPUT_HTML})");
+  console.log(`PDF saved as ${OUTPUT_PDF} (from ${INPUT_HTML})`);
 })();
 
