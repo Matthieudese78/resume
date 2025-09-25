@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CV Serre</title>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
 
     /* include padding in width calculations to avoid overflow when printing */
@@ -135,11 +135,12 @@
     .contacts{
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 4px;
       align-items: flex-start;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       line-height: 1.15;
-     /* transform: translateX(-18px); nudge contacts slightly toward the center */
+      transform: translateX(70px); 
+      min-width: 250px;
     }
     .contact-item{
       text-decoration: none;
@@ -181,7 +182,7 @@
     section h2 {
     /* font-size: var(--base-font-size); */
     font-size: calc(var(--base-font-size) * var(--h2-scale));
-    font-weight: 550;
+    font-weight: 500;
     /* border-bottom: 2px solid var(--accent); */
     border-bottom: 1.5px solid var(--deep-blue);
     color: var(--deep-blue);
@@ -251,6 +252,11 @@
       background-color: #f5f5f5; /* light gray on hover */
     }
 
+    .page-break {
+      page-break-before: always;
+      break-before: page;  /* modern syntax */
+    }
+
     /* @media (max-width:700px){ */
     @media (max-width:var(--content-width)){
       .we-item { grid-template-columns: 1fr; grid-template-areas: none; }
@@ -273,14 +279,22 @@
       <p class="title">Doctor in mechanical simulation | Scientific software development </p>
     </div>
 
-    <nav class="contacts">
-      <a class="contact-item" href="mailto:you@example.com" style="text-decoration: underline"> ✉️&nbsp;matthieu.serre78@gmail.com</a>
+    <!-- old : -->
+    <!-- <nav class="contacts">
+      <a class="contact-item" href="mailto:you@example.com" style="text-decoration: underline">✉️&nbsp;matthieu.serre78@gmail.com</a>
       <a class="contact-item">☎️&nbsp;+33 6 32 27 99 30</a>
       <span class="contact-item">📍&nbsp;Paris, France</span>
       <a class="contact-item" href="https://github.com/Matthieudese78" style="text-decoration: underline" target="_blank" rel="noopener noreferrer">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
        alt="GitHub" style="width:1em;height:1em;vertical-align:middle;margin-right:4px;">&nbsp;Matthieudese78
       </a>
+    </nav> -->
+    <!-- with awesome-fonts : -->
+    <nav class="contacts">
+      <a class="contact-item" href="mailto:you@example.com" style="text-decoration: underline"><i class="fa-regular fa-envelope"></i> &nbsp;matthieu.serre78@gmail.com</a>
+      <a class="contact-item"><i class="fa-solid fa-phone"></i>&nbsp;+33 6 32 27 99 30</a>
+      <span class="contact-item"><i class="fa-solid fa-location-dot"></i>&nbsp;Paris, France</span>
+      <a class="contact-item" href="https://github.com/Matthieudese78" style="text-decoration: underline"><i class="fa-brands fa-github"></i>&nbsp;Matthieudese78</a>
     </nav>
   </header>
 
@@ -293,7 +307,8 @@
   </section>
 
   <section id="programming-languages">
-  <h2>💻 Programming Skills</h2>
+  <!-- <h2>💻 Programming Skills</h2> -->
+<h2><i class="fa-solid fa-laptop-code"></i> Programming Skills</h2>
 
   <!-- <div class="we-item">
   <div class="we-left"> </div>
@@ -308,7 +323,8 @@
 
 
   <section id="scientific-skills">
-  <h2>🔬 Scientific Skills</h2>
+  <!-- <h2>🔬 Scientific Skills</h2> -->
+  <h2><i class="fa-solid fa-flask"></i> Scientific Skills</h2>
   <!-- <div class="we-left"> </div>
   <div class="we-right"> -->
     <span class="gui-button"> Lagrangian mechanics</span>      <span class="gui-button"> Contact Mechanics</span>      <span class="gui-button"> Finite Element Method</span>      <span class="gui-button"> Linear vibrations, modal decomposition</span>      <span class="gui-button"> Flexible Multibody Dynamics (robotics)</span>      <span class="gui-button"> Differential Geometry</span>      <span class="gui-button"> Numerical Schemes </span> <span class="gui-button">Electromagnetics </span> </li>
@@ -317,7 +333,9 @@
   </section>
 
   <section id="work-experience">
-  <h2> &#128188 Work Experience</h2>
+
+  <!-- <h2> &#128188 Work Experience</h2> -->
+  <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
 
   <div class="we-list">
     <div class="we-item">
@@ -377,6 +395,8 @@
       </div>
     </div>
 
+    <div class="page-break"></div>  <!-- add page break here -->
+
     <div class="we-item">
       <div class="we-left">Mar 2016 - Sep 2018</div>
       <div class="we-right">
@@ -433,7 +453,8 @@
   </div>
 
   <section id="education">
-  <h2>🎓 Education</h2>
+  <!-- <h2>🎓 Education</h2> -->
+  <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
 
   <div class="we-item">
   <div class="we-left">Sep 2013 - Sep 2016</div>
