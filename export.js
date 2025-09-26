@@ -6,9 +6,14 @@ const INPUT_HTML = process.argv[2] || "CV_Serre.html";
 const OUTPUT_PDF = process.argv[3] || INPUT_HTML.replace(/\.html?$/i, ".pdf");
 
 (async () => {
-  const browser = await puppeteer.launch({headless:"new", args: ['--font-render-hinting=medium']});
+  const browser = await puppeteer.launch({headless:"new", args: ['--font-render-hinting=medium','--force-color-profile=srgb','--force-device-scale-factor=1']});
   const page = await browser.newPage();
+
   await page.emulateMediaType("screen");
+
+  await page.evaluateHandle(() => {
+    CSS.supports('font-synthesis-weight', 'none');
+  });
 
   const filePath = `file:${path.join(__dirname, INPUT_HTML)}`;
   await page.goto(filePath, { waitUntil: "networkidle0" });
