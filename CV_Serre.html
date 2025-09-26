@@ -13,8 +13,10 @@
     /* ensure printable page margins */
     @page { size: A4 portrait; margin: 12mm; }
     @font-face{
-      font-family: "InterVar";
-      src: url("fonts/Inter-Variable.woff2") format("woff2");
+      /* font-family: "InterVar";
+      src: url("fonts/Inter-Variable.woff2") format("woff2"); */
+      font-family: "RobotoVar";
+      src: url("fonts/Roboto[wdth,wght].woff2") format("woff2");
       font-weight: 100 900;     /* declare variable weight range */
       font-style: normal;
     }
@@ -180,14 +182,15 @@
 
     section:first-of-type { margin-top: 0; }
 
-    section p, section ul, section ol, section li, .we-right, .we-right h3, .we-right h2, .we-left, .we-right p, .we-right ul, .we-right li{
+    section, section p, section ul, section ol, section li, .we-right, .we-right h3, .we-right h2, .we-left, .we-right p, .we-right ul, .we-right li{
       font-size: var(--base-font-size);
       margin-top: 0px;
       margin-bottom: 0px;
     }
     /* h3 {font-weight: bold;} */
-    .we-right h3, strong, section h3 {
-    font-family: "InterVar", sans-serif;
+    .we-right h3, strong, section h3, section strong {
+    /* font-family: "InterVar", sans-serif; */
+    font-family: "RobotoVar", sans-serif;
     /* .we-right h3, section h3 { */
       font-weight: 550;
     }
@@ -346,6 +349,7 @@
   </div> -->
   </section>
 
+
   <section id="work-experience">
 
   <!-- <h2> &#128188 Work Experience</h2> -->
@@ -357,14 +361,14 @@
         <div class="we-right">
         <strong> PhD - Contact model reduction applied to flexible multibody dynamics, Dynamic Studies Lab. CEA (Saclay, France) </strong> 
         <!-- <span class="fa-solid", font-weight=510> PhD - Contact model reduction applied to flexible multibody dynamics, Dynamic Studies Lab. CEA (Saclay, France) </span>  -->
-        <p> Numerical modeling of the vibratory behavior of flexible multibody systems undergoing shocks enables accurate structural health monitoring in hard-to-access environments. </p>
+        <p> Developed a numerical model for the vibratory behavior of flexible multibody systems undergoing shocks enables accurate structural health monitoring in hard-to-access environments. </p>
         <ul> 
-          <li>Numerical modeling of vibratory behaviour of flexible multibody systems under shocks for structural‑health monitoring.</li>
+          <li>Numerical modeling of vibratory behaviour of flexible multibody systems under shocks.</li>
           <li>Developed an explicit integration scheme for flexible multibody dynamics (Lie‑group integration and inertia coupling). Integrated into an industrial Fortran code.</li>
           <li>Designed a circle–cone reduced contact model for accurate non‑linear contact solicitations with low computational cost. (Fortran; data processing with pandas)</li>
-          <li>Industrial case study on a pressurised‑water reactor component; recalibrated the model against experimental results. (Fortran, Python)</li>
+          <li>Industrial case study on a pressurised‑water reactor component; validated the numerical model against experimental results. (Fortran, Python)</li>
         </ul> 
-        <p><strong>Communications</strong></p>
+        <p><strong>Communication</strong></p>
         <ul>
           <li>CSMA 2022 (Giens, France): “Vibratory modelling of multibody systems”.</li>
           <li>Nodycon 2023 (Rome, Italy): “A reduced model for conical contact dedicated to flexible multibody dynamics”.</li>
@@ -410,7 +414,7 @@
       </div>
     </div>
 
-    <div class="page-break"></div>  <!-- add page break here -->
+    <div class="page-break"></div>  
 
     <div class="we-item">
       <div class="we-left">Mar 2016 - Sep 2018</div>
@@ -428,7 +432,7 @@
   </div>
   </section>
 
-  <section id="education">
+  <section id="projects">
   <h2> ⚙ Projects</h2>
 
   <div class="we-item">
@@ -464,8 +468,7 @@
     </ul>
   </div>
   </div>
-
-  </div>
+  </section>
 
   <section id="education">
   <!-- <h2>🎓 Education</h2> -->
@@ -496,6 +499,12 @@
     </ul>
   </div>
   </div>
+  </section>
+
+  <section id="languages">
+  <!-- <h2>🎓 Education</h2> -->
+  <h2><i class="fa-solid fa-globe"></i> Languages</h2>
+   <strong>German</strong>-C2 | <strong>English</strong>-C2 TOEIC 935/990 | <strong>French</strong>-Native
   </section>
 
 
